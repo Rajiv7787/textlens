@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — TextLens Image to Text OCR Tool</title>
+  <meta name="description" content="Get in touch with the TextLens team. Have a question, suggestion, or feedback about our Image to Text OCR tool? We'd love to hear from you." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://textlens.app/contact.html" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>" />
+
+  <style>
+    /* Extra contact-page styles */
+    .contact-feedback {
+      margin-top: 16px;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      display: none;
+    }
+    .contact-feedback.success {
+      background: var(--accent-dim);
+      border: 1px solid rgba(0,229,195,0.3);
+      color: var(--accent);
+    }
+    .contact-feedback.error {
+      background: var(--error-bg);
+      border: 1px solid rgba(255,95,126,0.3);
+      color: var(--error);
+    }
+    .spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(0,0,0,0.2);
+      border-top-color: #0d1a17;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="TextLens Home">
+      <div class="logo-icon" aria-hidden="true">🔍</div>
+      Text<span>Lens</span>
+    </a>
+    <div class="nav-links" role="menubar">
+      <a href="index.html" role="menuitem">Tool</a>
+      <a href="about.html" role="menuitem">About</a>
+      <a href="privacy-policy.html" role="menuitem">Privacy</a>
+      <a href="disclaimer.html" role="menuitem">Disclaimer</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span id="theme-icon">☀️</span>
+      </button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav" role="menu">
+  <a href="index.html" role="menuitem">🔍 OCR Tool</a>
+  <a href="about.html" role="menuitem">ℹ️ About</a>
+  <a href="privacy-policy.html" role="menuitem">🔒 Privacy Policy</a>
+  <a href="disclaimer.html" role="menuitem">📋 Disclaimer</a>
+  <a href="contact.html" role="menuitem">✉️ Contact</a>
+</div>
+
+<main>
+  <!-- Page Hero -->
+  <section class="page-hero" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-tag">✉️ Get in Touch</div>
+      <h1 id="contact-heading">Contact Us</h1>
+      <p>Have a question, suggestion, or found a bug? We'd love to hear from you. Fill out the form below or reach us directly by email.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="contact-grid" role="main">
+
+      <!-- Contact Info -->
+      <aside aria-label="Contact information">
+        <div class="contact-info-card">
+          <h3>Contact Information</h3>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">📧</div>
+            <div class="info-text">
+              <h5>Email Address</h5>
+              <p aria-label="Email address: rajivsharmabba at gmail dot com">
+                rajivsharmabba [at] gmail [dot] com
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">⏱️</div>
+            <div class="info-text">
+              <h5>Response Time</h5>
+              <p>We typically respond within 24–48 business hours.</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">🌍</div>
+            <div class="info-text">
+              <h5>Support</h5>
+              <p>Available in English. We read every message personally.</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">🛠️</div>
+            <div class="info-text">
+              <h5>Bug Reports</h5>
+              <p>Describe the issue and include your browser name/version for fastest resolution.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Help -->
+        <div class="contact-info-card" style="margin-top:20px">
+          <h3 style="font-size:1rem;margin-bottom:16px">Quick Help</h3>
+          <p style="font-size:0.88rem;margin-bottom:12px">Before reaching out, you may find your answer in:</p>
+          <ul style="display:flex;flex-direction:column;gap:8px">
+            <li>
+              <a href="index.html#faq-heading" style="font-size:0.88rem;display:flex;align-items:center;gap:8px">
+                <span>❓</span> Frequently Asked Questions
+              </a>
+            </li>
+            <li>
+              <a href="about.html" style="font-size:0.88rem;display:flex;align-items:center;gap:8px">
+                <span>ℹ️</span> About & How It Works
+              </a>
+            </li>
+            <li>
+              <a href="privacy-policy.html" style="font-size:0.88rem;display:flex;align-items:center;gap:8px">
+                <span>🔒</span> Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Contact Form -->
+      <section aria-label="Contact form">
+        <div class="contact-form-card">
+          <h3>Send Us a Message</h3>
+
+          <form id="contact-form" novalidate aria-label="Contact form">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name">Full Name <span style="color:var(--error)">*</span></label>
+                <input
+                  type="text"
+                  id="cf-name"
+                  name="name"
+                  placeholder="Your full name"
+                  required
+                  autocomplete="name"
+                  aria-required="true"
+                  aria-label="Your full name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email Address <span style="color:var(--error)">*</span></label>
+                <input
+                  type="email"
+                  id="cf-email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                  aria-label="Your email address"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cf-subject">Subject</label>
+              <select id="cf-subject" name="subject" aria-label="Message subject">
+                <option value="">Select a topic…</option>
+                <option value="general">General Inquiry</option>
+                <option value="bug">Bug Report</option>
+                <option value="feature">Feature Request</option>
+                <option value="accuracy">OCR Accuracy Issue</option>
+                <option value="privacy">Privacy Question</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="cf-message">Message <span style="color:var(--error)">*</span></label>
+              <textarea
+                id="cf-message"
+                name="message"
+                placeholder="Describe your question or feedback in detail…"
+                required
+                aria-required="true"
+                aria-label="Your message"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg submit-btn" style="width:100%;justify-content:center" aria-label="Send your message">
+              ✉️ Send Message
+            </button>
+
+            <div id="contact-feedback" class="contact-feedback" role="alert" aria-live="polite"></div>
+
+            <p class="form-note">
+              🔒 Your information is only used to respond to your inquiry. We never share it with third parties. See our <a href="privacy-policy.html">Privacy Policy</a>.
+            </p>
+
+          </form>
+        </div>
+      </section>
+
+    </div><!-- /.contact-grid -->
+  </div><!-- /.container -->
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><div class="logo-icon">🔍</div>Text<span>Lens</span></a>
+        <p>Free, private, browser-based OCR tool. Extract text from any image instantly.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tool</h5>
+        <ul>
+          <li><a href="index.html">Image to Text</a></li>
+          <li><a href="index.html#faq-heading">FAQ</a></li>
+          <li><a href="about.html">How It Works</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 TextLens. All rights reserved.</p>
+      <p>Design by <strong style="color:var(--text-primary)">RAJIV SHARMA</strong></p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="alert" aria-live="assertive">
+  <span class="toast-icon">✅</span>
+  <span class="toast-msg"></span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

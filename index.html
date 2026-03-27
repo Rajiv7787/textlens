@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta -->
+  <title>TextLens — Free Image to Text OCR Tool | Extract Text from Images Online</title>
+  <meta name="description" content="Extract text from any image instantly with TextLens, the free AI-powered OCR tool. Upload JPG, PNG, or WEBP images and convert them to editable plain text in seconds. No sign-up required." />
+  <meta name="keywords" content="image to text, OCR tool, extract text from image, online OCR, free OCR, photo to text, jpg to text, png to text" />
+  <meta name="author" content="TextLens" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://textlens.app/index.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TextLens — Free Image to Text OCR Tool" />
+  <meta property="og:description" content="Extract text from images instantly. Free, private, and browser-based OCR — no uploads to any server." />
+  <meta property="og:url" content="https://textlens.app/" />
+  <meta property="og:site_name" content="TextLens" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TextLens — Free Image to Text OCR Tool" />
+  <meta name="twitter:description" content="Extract text from images instantly. Free, private, browser-based OCR." />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "TextLens OCR Tool",
+    "url": "https://textlens.app/",
+    "description": "Free browser-based OCR tool to extract text from images. Supports JPG, PNG, and WEBP formats.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Extract text from JPG images",
+      "Extract text from PNG images",
+      "Extract text from WEBP images",
+      "Paste image from clipboard",
+      "Drag and drop upload",
+      "Download extracted text as TXT",
+      "Copy text to clipboard",
+      "100% browser-based, no server upload"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="TextLens Home">
+      <div class="logo-icon" aria-hidden="true">🔍</div>
+      Text<span>Lens</span>
+    </a>
+
+    <div class="nav-links" role="menubar">
+      <a href="index.html" role="menuitem">Tool</a>
+      <a href="about.html" role="menuitem">About</a>
+      <a href="privacy-policy.html" role="menuitem">Privacy</a>
+      <a href="disclaimer.html" role="menuitem">Disclaimer</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span id="theme-icon">☀️</span>
+      </button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobile-nav" role="menu">
+  <a href="index.html" role="menuitem">🔍 OCR Tool</a>
+  <a href="about.html" role="menuitem">ℹ️ About</a>
+  <a href="privacy-policy.html" role="menuitem">🔒 Privacy Policy</a>
+  <a href="disclaimer.html" role="menuitem">📋 Disclaimer</a>
+  <a href="contact.html" role="menuitem">✉️ Contact</a>
+</div>
+
+<main>
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero-badge" role="note">
+        <span>⚡</span> Free · Private · No Sign-up
+      </div>
+      <h1 id="hero-heading" class="animate-up">
+        Turn Any Image Into<br><em>Editable Text</em>
+      </h1>
+      <p class="hero-sub animate-up">
+        Upload a photo, screenshot, or document image — TextLens extracts every word instantly using advanced OCR technology, right in your browser.
+      </p>
+
+      <div class="hero-stats" aria-label="Tool statistics">
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Free Forever</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">0s</div>
+          <div class="stat-label">Server Upload</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Formats Supported</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">99+</div>
+          <div class="stat-label">Languages (via Tesseract)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN TOOL
+       ============================================================ -->
+  <section class="tool-section" aria-labelledby="tool-heading">
+    <div class="container">
+      <h2 id="tool-heading" class="d-none">Image to Text Converter</h2>
+
+      <div class="tool-card" role="main">
+
+        <!-- Upload Panel -->
+        <div class="upload-panel">
+          <div class="panel-label">
+            <span class="dot" aria-hidden="true"></span>
+            Step 1 — Upload Image
+          </div>
+
+          <!-- Drop Zone -->
+          <div
+            class="drop-zone"
+            id="drop-zone"
+            role="button"
+            tabindex="0"
+            aria-label="Upload image: click, drag and drop, or paste from clipboard"
+            aria-describedby="drop-hint"
+          >
+            <!-- Default state -->
+            <div id="drop-default">
+              <div class="drop-icon" aria-hidden="true">🖼️</div>
+              <h3>Drop your image here</h3>
+              <p id="drop-hint">Supports JPG, PNG, WEBP — up to 10 MB</p>
+              <div class="or-divider">or</div>
+              <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+                <button class="btn btn-secondary btn-sm" onclick="document.getElementById('file-input').click()" type="button" aria-label="Browse files to upload">
+                  📁 Browse Files
+                </button>
+                <span class="btn btn-ghost btn-sm" style="cursor:default;pointer-events:none" aria-label="Keyboard shortcut to paste">
+                  ⌨️ Ctrl+V to Paste
+                </span>
+              </div>
+            </div>
+
+            <!-- Preview container (shown after file selected) -->
+            <div id="preview-container">
+              <img id="image-preview" src="" alt="Uploaded image preview" loading="lazy" />
+              <div class="preview-overlay">
+                <button class="btn btn-ghost btn-sm btn-icon" onclick="document.getElementById('file-input').click()" title="Change image" type="button" aria-label="Change image">🔄</button>
+              </div>
+            </div>
+          </div>
+
+          <input type="file" id="file-input" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" aria-label="Choose image file" />
+
+          <!-- Upload Actions -->
+          <div class="upload-actions">
+            <div class="action-left">
+              <button class="btn btn-primary btn-lg" id="ocr-btn" disabled aria-label="Extract text from uploaded image" type="button">
+                🔍 Extract Text
+              </button>
+              <button class="btn btn-secondary" id="clear-btn" type="button" aria-label="Clear and start over">
+                🗑️ Clear
+              </button>
+            </div>
+            <div class="action-right">
+              <span class="btn btn-ghost btn-sm" style="cursor:default;pointer-events:none;font-size:0.8rem;color:var(--text-muted)" aria-label="Privacy notice">
+                🔒 Processed locally — never uploaded
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Error Banner -->
+        <div class="error-banner" id="error-banner" role="alert" aria-live="polite">
+          <span class="err-icon">⚠️</span>
+          <span class="err-text" id="error-text"></span>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-wrap" id="progress-wrap" role="status" aria-live="polite">
+          <div class="progress-header">
+            <div class="progress-label">
+              <span class="spinner" aria-hidden="true"></span>
+              <span id="progress-msg">Initializing…</span>
+            </div>
+            <span class="progress-pct" id="progress-pct" aria-label="Progress percentage">0%</span>
+          </div>
+          <div class="progress-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="progress-bar-fill" id="progress-fill"></div>
+          </div>
+        </div>
+
+        <!-- Output Panel -->
+        <div class="output-panel">
+          <div class="panel-label">
+            <span class="dot" aria-hidden="true"></span>
+            Step 2 — Extracted Text
+          </div>
+
+          <div class="output-header">
+            <div></div>
+            <div class="output-actions">
+              <button class="btn btn-secondary btn-sm" id="copy-btn" disabled type="button" aria-label="Copy extracted text to clipboard">
+                📋 Copy Text
+              </button>
+              <button class="btn btn-secondary btn-sm" id="download-btn" disabled type="button" aria-label="Download extracted text as .txt file">
+                💾 Download .txt
+              </button>
+            </div>
+          </div>
+
+          <!-- Placeholder shown before extraction -->
+          <div id="output-placeholder" class="output-placeholder" role="note">
+            <span class="placeholder-icon" aria-hidden="true">📄</span>
+            <p>Extracted text will appear here after processing</p>
+          </div>
+
+          <!-- Actual text output -->
+          <div
+            id="output-box"
+            role="textbox"
+            aria-label="Extracted text output"
+            aria-multiline="true"
+            aria-readonly="true"
+            tabindex="0"
+            style="display:none"
+          ></div>
+
+          <div class="output-meta" aria-live="polite">
+            <span id="char-count" aria-label="Character count">0 chars</span>
+            <span id="word-count" aria-label="Word count">0 words</span>
+          </div>
+        </div>
+
+      </div><!-- /.tool-card -->
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW IT WORKS
+       ============================================================ -->
+  <section class="section" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">How It Works</div>
+        <h2 id="how-heading">Extract Text from Images in 3 Steps</h2>
+        <p>Our OCR tool uses Tesseract.js to process your image entirely in the browser — fast, private, and free.</p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card animate-up">
+          <div class="step-num" aria-hidden="true">01</div>
+          <div class="step-icon" aria-hidden="true">🖼️</div>
+          <h3>Upload Your Image</h3>
+          <p>Drag and drop a JPG, PNG, or WEBP image onto the upload area, browse your files, or paste an image directly from your clipboard using Ctrl+V.</p>
+        </article>
+        <article class="step-card animate-up">
+          <div class="step-num" aria-hidden="true">02</div>
+          <div class="step-icon" aria-hidden="true">⚙️</div>
+          <h3>OCR Processing</h3>
+          <p>Click "Extract Text" and our Tesseract.js engine analyzes every pixel in your image, identifying characters and reconstructing the text with high accuracy.</p>
+        </article>
+        <article class="step-card animate-up">
+          <div class="step-num" aria-hidden="true">03</div>
+          <div class="step-icon" aria-hidden="true">📋</div>
+          <h3>Copy or Download</h3>
+          <p>Your extracted text appears instantly in the output box. Copy it to your clipboard with one click or download it as a .txt file for later use.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURES
+       ============================================================ -->
+  <section class="section features-bg" aria-labelledby="features-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Features</div>
+        <h2 id="features-heading">Everything You Need in an OCR Tool</h2>
+        <p>Built for speed, privacy, and accuracy — no account, no uploads, no limits.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon" aria-hidden="true">🔒</div>
+          <h4>100% Private</h4>
+          <p>All processing happens in your browser. Your images never leave your device or touch any external server.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon" aria-hidden="true">⚡</div>
+          <h4>Lightning Fast</h4>
+          <p>Tesseract.js runs natively in your browser using WebAssembly for near-instant OCR results on most images.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon" aria-hidden="true">🌐</div>
+          <h4>No Sign-up Required</h4>
+          <p>Open the page, upload an image, get your text. No account creation, no email, no credit card — ever.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon" aria-hidden="true">📋</div>
+          <h4>Clipboard Paste</h4>
+          <p>Press Ctrl+V to paste any image directly from your clipboard — great for screenshots and screen captures.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon" aria-hidden="true">🌙</div>
+          <h4>Dark & Light Mode</h4>
+          <p>Switch between dark and light themes to suit your environment. Your preference is saved automatically.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon" aria-hidden="true">📱</div>
+          <h4>Works on Mobile</h4>
+          <p>Fully responsive design means you can extract text from images on your phone or tablet just as easily.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section class="section" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">FAQ</div>
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <p>Everything you need to know about our Image to Text OCR tool.</p>
+      </div>
+
+      <div class="faq-list" role="list">
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">
+            What is an Image to Text (OCR) converter?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a" id="faq-a-1" role="region">
+            <p>An Image to Text converter, also called an OCR (Optical Character Recognition) tool, is software that reads text embedded in images and converts it into editable, machine-readable plain text. TextLens uses the open-source Tesseract.js library to perform this conversion entirely within your web browser — no server processing required.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">
+            Which image formats does TextLens support?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a" id="faq-a-2" role="region">
+            <p>TextLens currently supports JPG/JPEG, PNG, and WEBP image formats. These cover the vast majority of photos, screenshots, and scanned documents you're likely to encounter. Maximum file size is 10 MB per image to ensure smooth browser performance.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
+            Is my data safe? Are my images uploaded to a server?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a" id="faq-a-3" role="region">
+            <p>Absolutely. TextLens is entirely client-side — meaning all processing happens locally on your device, inside your browser. Your images are never uploaded to any external server, never stored, and never shared. This makes TextLens one of the most private OCR tools available online.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">
+            How accurate is the text extraction?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a" id="faq-a-4" role="region">
+            <p>Accuracy depends on image quality. For clear, high-resolution images with good contrast and standard fonts, Tesseract.js can achieve 95%+ accuracy. Blurry images, stylized fonts, or images with complex backgrounds may yield lower accuracy. For best results, use images with at least 150 DPI resolution and good lighting.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5">
+            Can I extract text from a screenshot?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a" id="faq-a-5" role="region">
+            <p>Yes! Screenshots are typically high-resolution with clear text, making them ideal for OCR. You can paste a screenshot directly by copying it to your clipboard (using Print Screen or a snipping tool) and pressing Ctrl+V on the TextLens page — no file saving needed.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-6">
+            Does TextLens work on mobile devices?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a" id="faq-a-6" role="region">
+            <p>Yes. TextLens is built with a mobile-first responsive design. You can open the tool in your mobile browser, tap the upload area to select a photo from your camera roll, and extract text just as you would on a desktop. The interface adapts automatically to your screen size.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-7">
+            Is TextLens completely free?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a" id="faq-a-7" role="region">
+            <p>Yes, TextLens is 100% free with no hidden costs, no usage limits, and no premium tiers. You can extract text from as many images as you need without any restrictions. We're committed to keeping this tool free and accessible to everyone.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA STRIP
+       ============================================================ -->
+  <section aria-label="Call to action">
+    <div class="container">
+      <div class="cta-strip">
+        <div>
+          <h2>Ready to Extract Text from Your Image?</h2>
+          <p>No sign-up. No uploads. Just drag, drop, and get your text in seconds.</p>
+        </div>
+        <div class="cta-right">
+          <a href="#drop-zone" class="btn btn-primary btn-lg" aria-label="Start using the OCR tool now">
+            🔍 Start Extracting Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="TextLens Home">
+          <div class="logo-icon" aria-hidden="true">🔍</div>
+          Text<span>Lens</span>
+        </a>
+        <p>Free, private, browser-based OCR tool. Extract text from any image instantly — no server, no sign-up required.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Tool</h5>
+        <ul>
+          <li><a href="index.html">Image to Text</a></li>
+          <li><a href="index.html#faq-heading">FAQ</a></li>
+          <li><a href="about.html">How It Works</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 TextLens. All rights reserved.</p>
+      <p>Design by <strong style="color:var(--text-primary)">RAJIV SHARMA</strong></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <span class="toast-icon" aria-hidden="true">✅</span>
+  <span class="toast-msg"></span>
+</div>
+
+<!-- Tesseract.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

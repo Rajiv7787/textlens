@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About TextLens — Free OCR & Image to Text Tool</title>
+  <meta name="description" content="Learn about TextLens, the free browser-based Image to Text OCR tool. Discover our mission to make text extraction fast, private, and accessible to everyone." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://textlens.app/about.html" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About TextLens",
+    "url": "https://textlens.app/about.html",
+    "description": "About page for TextLens OCR tool — the free, private, browser-based image to text converter.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "TextLens",
+      "url": "https://textlens.app"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="TextLens Home">
+      <div class="logo-icon" aria-hidden="true">🔍</div>
+      Text<span>Lens</span>
+    </a>
+    <div class="nav-links" role="menubar">
+      <a href="index.html" role="menuitem">Tool</a>
+      <a href="about.html" role="menuitem">About</a>
+      <a href="privacy-policy.html" role="menuitem">Privacy</a>
+      <a href="disclaimer.html" role="menuitem">Disclaimer</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span id="theme-icon">☀️</span>
+      </button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav" role="menu">
+  <a href="index.html" role="menuitem">🔍 OCR Tool</a>
+  <a href="about.html" role="menuitem">ℹ️ About</a>
+  <a href="privacy-policy.html" role="menuitem">🔒 Privacy Policy</a>
+  <a href="disclaimer.html" role="menuitem">📋 Disclaimer</a>
+  <a href="contact.html" role="menuitem">✉️ Contact</a>
+</div>
+
+<main>
+  <!-- Page Hero -->
+  <section class="page-hero" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-tag">About TextLens</div>
+      <h1 id="about-heading">Built for Anyone Who Needs Text<br>From an Image</h1>
+      <p>TextLens was created with a single mission: to give everyone a fast, free, and completely private way to extract text from images — without installing software or creating accounts.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content-body">
+
+      <h2>Our Mission</h2>
+      <p>
+        Text is often trapped inside images — screenshots, scanned receipts, photographs of signs, PDFs converted to images, and more. TextLens exists to set that text free. We believe OCR (Optical Character Recognition) technology should be accessible to everyone, not locked behind paywalls or complex software installations.
+      </p>
+      <p>
+        Every feature we build is guided by three core principles: it must be <strong style="color:var(--text-primary)">fast</strong>, <strong style="color:var(--text-primary)">private</strong>, and <strong style="color:var(--text-primary)">free</strong>. We never compromise on any of these.
+      </p>
+
+      <h2>How TextLens Works</h2>
+      <p>
+        TextLens is powered by <strong style="color:var(--text-primary)">Tesseract.js</strong>, a JavaScript port of Google's industry-leading Tesseract OCR engine. When you upload an image, Tesseract.js runs entirely within your browser using WebAssembly — a near-native execution environment built into modern browsers.
+      </p>
+      <p>
+        This means your image never leaves your device. There is no server-side processing, no file storage, and no data collection of any kind. The entire OCR pipeline — from image loading to text output — happens locally on your computer or phone.
+      </p>
+
+      <h2>Our Core Values</h2>
+
+      <div class="about-values">
+        <div class="value-card">
+          <div class="value-icon">🔒</div>
+          <h4>Privacy First</h4>
+          <p>Your data belongs to you. We process everything locally and collect absolutely nothing. No cookies for tracking, no analytics on your files, no logs.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">⚡</div>
+          <h4>Speed &amp; Performance</h4>
+          <p>We use WebAssembly and optimized Tesseract models to ensure OCR is as fast as possible, even on images with large amounts of text.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">♿</div>
+          <h4>Accessibility</h4>
+          <p>TextLens is built with ARIA labels, keyboard navigation, and responsive design so it works for all users regardless of ability or device.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🌱</div>
+          <h4>Always Free</h4>
+          <p>TextLens has no premium tier, no usage limits, and no hidden costs. We believe everyone deserves access to quality tools regardless of budget.</p>
+        </div>
+      </div>
+
+      <h2>Who Uses TextLens?</h2>
+      <p>TextLens is used by a wide range of people for many everyday tasks:</p>
+      <ul>
+        <li><strong style="color:var(--text-primary)">Students</strong> — Digitizing handwritten or printed notes from textbook photos.</li>
+        <li><strong style="color:var(--text-primary)">Professionals</strong> — Extracting text from scanned documents, business cards, or meeting whiteboards.</li>
+        <li><strong style="color:var(--text-primary)">Writers &amp; Researchers</strong> — Converting image-based quotes or references into editable text for citations.</li>
+        <li><strong style="color:var(--text-primary)">Developers</strong> — Quickly extracting error messages from screenshots without retyping.</li>
+        <li><strong style="color:var(--text-primary)">Anyone</strong> — Anyone who has ever needed to copy text from an image and couldn't.</li>
+      </ul>
+
+      <h2>Technology Stack</h2>
+      <p>TextLens is built with simplicity and performance in mind. There is no heavyweight framework, no server infrastructure, and no unnecessary dependencies:</p>
+      <ul>
+        <li><strong style="color:var(--text-primary)">HTML5</strong> — Semantic, accessible markup for all pages.</li>
+        <li><strong style="color:var(--text-primary)">CSS3</strong> — Custom properties, responsive grid, smooth animations.</li>
+        <li><strong style="color:var(--text-primary)">Vanilla JavaScript</strong> — Zero dependencies beyond Tesseract.js.</li>
+        <li><strong style="color:var(--text-primary)">Tesseract.js v5</strong> — The browser-native OCR engine powering text extraction.</li>
+        <li><strong style="color:var(--text-primary)">WebAssembly</strong> — Used internally by Tesseract.js for near-native performance.</li>
+      </ul>
+
+      <h2>About the Creator</h2>
+      <p>
+        TextLens was designed and built by <strong style="color:var(--text-primary)">Rajiv Sharma</strong>, a developer passionate about creating practical web tools that solve real problems. Rajiv's focus is on clean code, minimal UI, and maximum utility.
+      </p>
+      <p>
+        Have questions, suggestions, or feedback? We'd love to hear from you. Visit the <a href="contact.html">Contact page</a> to get in touch.
+      </p>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-strip" style="margin-top:0">
+      <div>
+        <h2>Try the OCR Tool Now</h2>
+        <p>Upload any image and extract its text for free — in seconds.</p>
+      </div>
+      <div class="cta-right">
+        <a href="index.html" class="btn btn-primary btn-lg" aria-label="Go to the OCR tool">🔍 Open TextLens Tool</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><div class="logo-icon">🔍</div>Text<span>Lens</span></a>
+        <p>Free, private, browser-based OCR tool. Extract text from any image instantly.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tool</h5>
+        <ul>
+          <li><a href="index.html">Image to Text</a></li>
+          <li><a href="index.html#faq-heading">FAQ</a></li>
+          <li><a href="about.html">How It Works</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 TextLens. All rights reserved.</p>
+      <p>Design by <strong style="color:var(--text-primary)">RAJIV SHARMA</strong></p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="alert" aria-live="assertive">
+  <span class="toast-icon">✅</span>
+  <span class="toast-msg"></span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

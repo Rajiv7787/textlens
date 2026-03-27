@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — TextLens Image to Text OCR Tool</title>
+  <meta name="description" content="TextLens Privacy Policy. We process all images locally in your browser. No data is collected, stored, or transmitted to any server. Your privacy is our top priority." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://textlens.app/privacy-policy.html" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>" />
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="TextLens Home">
+      <div class="logo-icon" aria-hidden="true">🔍</div>
+      Text<span>Lens</span>
+    </a>
+    <div class="nav-links" role="menubar">
+      <a href="index.html" role="menuitem">Tool</a>
+      <a href="about.html" role="menuitem">About</a>
+      <a href="privacy-policy.html" role="menuitem">Privacy</a>
+      <a href="disclaimer.html" role="menuitem">Disclaimer</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span id="theme-icon">☀️</span>
+      </button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav" role="menu">
+  <a href="index.html" role="menuitem">🔍 OCR Tool</a>
+  <a href="about.html" role="menuitem">ℹ️ About</a>
+  <a href="privacy-policy.html" role="menuitem">🔒 Privacy Policy</a>
+  <a href="disclaimer.html" role="menuitem">📋 Disclaimer</a>
+  <a href="contact.html" role="menuitem">✉️ Contact</a>
+</div>
+
+<main>
+  <section class="page-hero" aria-labelledby="privacy-heading">
+    <div class="container">
+      <div class="section-tag">🔒 Legal</div>
+      <h1 id="privacy-heading">Privacy Policy</h1>
+      <p>Last updated: January 1, 2025 · TextLens is built on a foundation of absolute privacy. Read how we protect your data.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content-body">
+
+      <h2>Overview</h2>
+      <p>
+        TextLens ("we," "our," or "the tool") is committed to protecting your privacy. This Privacy Policy explains what data we collect (spoiler: almost none), how we handle the information you interact with on our website, and your rights as a user.
+      </p>
+      <p>
+        The most important thing to know upfront: <strong style="color:var(--text-primary)">the images you upload to TextLens are never sent to any server.</strong> All OCR processing happens locally in your web browser. We have no technical ability to view, collect, or store your images.
+      </p>
+
+      <h2>1. Information We Do NOT Collect</h2>
+      <p>The following types of information are never collected, transmitted, or stored by TextLens:</p>
+      <ul>
+        <li>Images you upload or paste into the tool</li>
+        <li>Text extracted from your images</li>
+        <li>File names, sizes, or metadata of uploaded files</li>
+        <li>Your name, email address, or any personally identifiable information (unless you voluntarily submit our contact form)</li>
+        <li>Login credentials (we have no accounts or authentication system)</li>
+        <li>Browsing history or session data beyond what your browser stores locally</li>
+      </ul>
+
+      <h2>2. Local Processing — How It Works</h2>
+      <p>
+        TextLens uses <strong style="color:var(--text-primary)">Tesseract.js</strong>, an open-source JavaScript OCR library that runs entirely within your browser via WebAssembly. When you upload an image:
+      </p>
+      <ul>
+        <li>The image is read by the browser's built-in FileReader API directly into memory.</li>
+        <li>Tesseract.js processes the image pixels locally on your device's CPU.</li>
+        <li>The extracted text is displayed in the output box within the page.</li>
+        <li>No image data, pixel data, or file content is transmitted over any network.</li>
+      </ul>
+      <p>You can verify this yourself by opening your browser's Network Developer Tools (F12 → Network) and observing that no outbound requests are made containing your image data when you run OCR.</p>
+
+      <h2>3. Cookies and Local Storage</h2>
+      <p>TextLens uses browser <strong style="color:var(--text-primary)">localStorage</strong> for exactly one purpose: storing your dark/light mode theme preference. This is a single key-value pair (e.g., <code style="color:var(--accent);font-size:0.85em">tl-theme: "dark"</code>) stored locally in your browser. It does not contain any personal data and is never transmitted anywhere.</p>
+      <p>We do not use advertising cookies, tracking cookies, analytics cookies, or any third-party cookies that could identify you across websites.</p>
+
+      <h2>4. Third-Party Services</h2>
+      <p>TextLens loads the following third-party resources:</p>
+      <ul>
+        <li><strong style="color:var(--text-primary)">Google Fonts (fonts.googleapis.com)</strong> — Used to load the Syne and DM Sans typefaces. Google may log the font request IP address. You can review Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> for details.</li>
+        <li><strong style="color:var(--text-primary)">jsDelivr CDN (cdn.jsdelivr.net)</strong> — Used to load the Tesseract.js library file. jsDelivr may log CDN access requests. You can review jsDelivr's <a href="https://www.jsdelivr.com/privacy-policy-jsdelivr-net" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</li>
+      </ul>
+      <p>Neither of these services receives your images or extracted text. They only serve static files (fonts and JavaScript libraries).</p>
+
+      <h2>5. Contact Form Data</h2>
+      <p>
+        If you use the contact form on our <a href="contact.html">Contact page</a>, the information you voluntarily provide (name, email address, and message) is currently handled client-side only and is not transmitted to any backend server. It is used solely to simulate the contact interaction in your browser.
+      </p>
+      <p>If we implement server-side contact form handling in the future, this policy will be updated accordingly, and any data submitted will be used solely to respond to your inquiry and will not be shared with third parties.</p>
+
+      <h2>6. Children's Privacy</h2>
+      <p>
+        TextLens does not knowingly collect information from or about children under the age of 13. The tool is designed for general use and does not request any personal information from users of any age. If you believe a child has inadvertently submitted personal information through our contact form, please contact us immediately.
+      </p>
+
+      <h2>7. Security</h2>
+      <p>
+        Because TextLens processes all data locally and collects no personal data on our servers, the traditional security risks associated with data breaches are not applicable to this tool. Your images and extracted text exist only in your browser's memory and are cleared when you close the tab or click "Clear."
+      </p>
+
+      <h2>8. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. If we make material changes — particularly if we ever introduce server-side processing — we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically.
+      </p>
+
+      <h2>9. Contact</h2>
+      <p>
+        If you have any questions about this Privacy Policy or your privacy while using TextLens, please visit our <a href="contact.html">Contact page</a>.
+      </p>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><div class="logo-icon">🔍</div>Text<span>Lens</span></a>
+        <p>Free, private, browser-based OCR tool. Extract text from any image instantly.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tool</h5>
+        <ul>
+          <li><a href="index.html">Image to Text</a></li>
+          <li><a href="index.html#faq-heading">FAQ</a></li>
+          <li><a href="about.html">How It Works</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 TextLens. All rights reserved.</p>
+      <p>Design by <strong style="color:var(--text-primary)">RAJIV SHARMA</strong></p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="alert" aria-live="assertive">
+  <span class="toast-icon">✅</span>
+  <span class="toast-msg"></span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
