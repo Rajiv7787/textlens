@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title id="metaTitle">Blog</title>
+</head>
+<body>
+
+<h1 id="title"></h1>
+<div id="content"></div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const slug = params.get("post");
+
+fetch("./posts.json")
+  .then(res => res.json())
+  .then(data => {
+    const post = data.find(p => p.slug === slug);
+
+    if (!post) {
+      document.body.innerHTML = "Post not found";
+      return;
+    }
+
+    document.getElementById("title").innerText = post.title;
+    document.getElementById("content").innerHTML = post.content;
+    document.title = post.title;
+  });
+</script>
+
+</body>
+</html>
